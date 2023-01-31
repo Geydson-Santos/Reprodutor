@@ -5,7 +5,6 @@
 package com.jp.visao;
 
 import com.formdev.flatlaf.FlatDarkLaf;
-import com.jp1.visao.ExploradorDeArquivos;
 //import java.io.BufferedInputStream;
 import java.io.File;
 import javafx.util.Duration;

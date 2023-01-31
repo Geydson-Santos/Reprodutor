@@ -5,7 +5,7 @@
 package com.jp.visao;
 
 import com.formdev.flatlaf.FlatDarkLaf;
-import com.jp.visao.ExploradorDeArquivos;
+import com.jp1.visao.ExploradorDeArquivos;
 //import java.io.BufferedInputStream;
 import java.io.File;
 import javafx.util.Duration;
@@ -127,9 +127,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
+        jLabel2D1 = new com.jp.modelos.JLabel2D();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel2D2 = new com.jp.modelos.JLabel2D();
+        jLabel2DPlayPause = new com.jp.modelos.JLabel2D();
         jButton1 = new javax.swing.JButton();
         jSlider1 = new javax.swing.JSlider();
+        jLabel2DDuracao = new com.jp.modelos.JLabel2D();
+        jLabel2DPosicao = new com.jp.modelos.JLabel2D();
         jDesktopPane1 = new javax.swing.JDesktopPane();
 
         jInternalFrame1.setBorder(null);
@@ -138,6 +143,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jInternalFrame1.setVisible(true);
         jInternalFrame1.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2D1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2D1.setText("Reprodutor");
+        jLabel2D1.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        jInternalFrame1.getContentPane().add(jLabel2D1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 450, -1));
+
         jComboBox1.setEnabled(false);
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,6 +155,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jInternalFrame1.getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, 250, -1));
+
+        jLabel2D2.setText("Músicas");
+        jLabel2D2.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        jInternalFrame1.getContentPane().add(jLabel2D2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, -1, -1));
+
+        jLabel2DPlayPause.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2DPlayPause.setText("▶");
+        jLabel2DPlayPause.setEnabled(false);
+        jLabel2DPlayPause.setFont(new java.awt.Font("Yu Gothic UI", 0, 48)); // NOI18N
+        jLabel2DPlayPause.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2DPlayPauseMouseClicked(evt);
+            }
+        });
+        jInternalFrame1.getContentPane().add(jLabel2DPlayPause, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 80, 60));
 
         jButton1.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
         jButton1.setText("🔍");
@@ -167,6 +192,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jInternalFrame1.getContentPane().add(jSlider1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 340, -1));
+
+        jLabel2DDuracao.setText("0:00");
+        jLabel2DDuracao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jInternalFrame1.getContentPane().add(jLabel2DDuracao, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 30, -1));
+
+        jLabel2DPosicao.setText("0:00");
+        jLabel2DPosicao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jInternalFrame1.getContentPane().add(jLabel2DPosicao, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 30, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -311,6 +344,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JInternalFrame jInternalFrame1;
+    private com.jp.modelos.JLabel2D jLabel2D1;
+    private com.jp.modelos.JLabel2D jLabel2D2;
+    private com.jp.modelos.JLabel2D jLabel2DDuracao;
+    private com.jp.modelos.JLabel2D jLabel2DPlayPause;
+    private com.jp.modelos.JLabel2D jLabel2DPosicao;
     private javax.swing.JSlider jSlider1;
     // End of variables declaration//GEN-END:variables
 }

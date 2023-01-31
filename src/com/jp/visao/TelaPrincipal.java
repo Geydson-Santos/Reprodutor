@@ -62,9 +62,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     
     public void abrirMusica(){
         media = new Media(musicaAtual.toURI().toString());
+        
         duracao = media.getDuration();
-        jLabel2DDuracao.setText(minutos(duracao.toSeconds()));
         jSlider1.setMaximum((int) (duracao.toMillis()));
+        jLabel2DDuracao.setText(minutos(duracao.toSeconds()));
         player = new MediaPlayer(media);
     }
     
@@ -72,8 +73,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         
         int segundos = (int) (tempoSegundos);
         
-        int minutos = segundos % 60;
-        segundos = segundos / 60;
+        int minutos = segundos / 60;
+        segundos = segundos % 60;
         
         String tempo = "";
         
@@ -190,15 +191,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 jSlider1MouseReleased(evt);
             }
         });
-        jInternalFrame1.getContentPane().add(jSlider1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 340, -1));
+        jInternalFrame1.getContentPane().add(jSlider1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 320, -1));
 
-        jLabel2DDuracao.setText("0:00");
+        jLabel2DDuracao.setText("00:00");
         jLabel2DDuracao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jInternalFrame1.getContentPane().add(jLabel2DDuracao, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 30, -1));
+        jInternalFrame1.getContentPane().add(jLabel2DDuracao, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 40, -1));
 
-        jLabel2DPosicao.setText("0:00");
+        jLabel2DPosicao.setText("00:00");
         jLabel2DPosicao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jInternalFrame1.getContentPane().add(jLabel2DPosicao, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 30, -1));
+        jInternalFrame1.getContentPane().add(jLabel2DPosicao, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 40, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -235,17 +236,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
             
             String musicasDaPasta[] = new String[musicas.size()];
-            
-            for(int i = 0; i < musicasDaPasta.length; i++){
-                File musica = musicas.get(i);
-                musicasDaPasta[i] = musica.getName().replace("." + extensao(musica), "");
+            if(musicasDaPasta.length > 0){
+                for(int i = 0; i < musicasDaPasta.length; i++){
+                    File musica = musicas.get(i);
+                    musicasDaPasta[i] = musica.getName().replace("." + extensao(musica), "");
+                }
+
+                jComboBox1.setModel(new DefaultComboBoxModel<>(musicasDaPasta));
+                jComboBox1.setEnabled(true);
+                jLabel2DPlayPause.setEnabled(true);
+                musicaAtual = musicas.get(0);
+                abrirMusica();
             }
             
-            jComboBox1.setModel(new DefaultComboBoxModel<>(musicasDaPasta));
-            jComboBox1.setEnabled(true);
-            jLabel2DPlayPause.setEnabled(true);
-            musicaAtual = musicas.get(0);
-            abrirMusica();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -275,7 +278,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         }else{
             jLabel2DPlayPause.setText("▶");
             try{
-                player.stop();
+                player.pause();
             }catch(Exception e){
                 e.printStackTrace();
             }

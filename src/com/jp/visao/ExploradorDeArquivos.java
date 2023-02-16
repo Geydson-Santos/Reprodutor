@@ -6,6 +6,7 @@ package com.jp.visao;
 
 import java.awt.Component;
 import javax.swing.JFileChooser;
+
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
@@ -32,6 +33,7 @@ public class ExploradorDeArquivos extends JFileChooser {
         UIManager.put("FileChooser.newFolderButtonText", "Criar Nova Pasta");
         UIManager.put("FileChooser.renameFileButtonText", "Renomear");
         UIManager.put("FileChooser.deleteFileButtonText", "Apagar");
+        //UIManager.put("FileChooser.folderNameHeaderText", "Nome da Pasta");
         UIManager.put("FileChooser.filterLabelText", "Tipo de Arquivos");
         UIManager.put("FileChooser.detailsViewButtonToolTipText", "Detalhes");
         UIManager.put("FileChooser.fileSizeHeaderText", "Tamanho");

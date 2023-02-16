@@ -30,14 +30,14 @@ import java.awt.event.WindowListener;
 import java.awt.font.FontRenderContext;
 import java.awt.font.TextLayout;
 import java.awt.geom.AffineTransform;
-import java.beans.JavaBean;
+//import java.beans.JavaBean;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.border.LineBorder;
 
-@JavaBean(defaultProperty = "UI", description = "A custom JLabel that you can put an outline on the text between others.")
+//@JavaBean(defaultProperty = "UI", description = "A custom JLabel that you can put an outline on the text between others.")
 
 public class JLabel2D extends JLabel {
     public static final int EFFECT_PLAIN = 0;

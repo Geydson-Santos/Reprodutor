@@ -1,0 +1,16 @@
+
+.panelFundo{
+    -fx-background-color: #333333;
+}
+
+.button{
+    -fx-background-color: #cccccc;
+}
+
+.combobox{
+    -fx-background-color: #cccccc;
+}
+
+.label{
+    -fx-text-fill: #fff;
+}

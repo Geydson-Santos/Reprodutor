@@ -1,10 +1,10 @@
 # Reprodutor
 
 ### Resumo
-Esse programa é uma tentativa de fazer um reprodutor de música em java.
+Esse programa é uma tentativa de fazer um reprodutor de música em Java.
 
 ### História
-Eu fiquei muito tempo tentando fazer um reprodutor de música em java, um verdadeiro desafio.
+Eu fiquei muito tempo tentando fazer um reprodutor de música em Java, um verdadeiro desafio.
 
 Primeiramente eu comecei com a biblioteca de Clip, AudioSystem e InputStream nativas do Java para fazer isso, contudo, infelizmente o Java só suporta o formato .wav e outros formatos que não conheço, não dava pra usar essas bibliotecas para o que eu queria.
 

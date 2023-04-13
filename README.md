@@ -18,7 +18,7 @@ O JavaFX consegue ser a melhor biblioteca no sentido de músicas, tanto que é a
 O projeto atualmente possibilita escolher uma pasta de músicas como uma biblioteca (ele não pega as músicas que estão em subpastas) e te permite saber a posição atual da música, o tamanho dela e mudar a posição da música através do Slider do JavaFX.
 
 ### Instalação
-Para testar esse projeto é possível apenas executar o arquivo "Executar.bat" que está na raiz do projeto. Se você quiser abrir ele na sua IDE, é necessário instalar o JavaFX através da instalação do Java SE e configurar na sua IDE.
+Para testar esse projeto é possível apenas executar o arquivo <a href="Executar.bat">Executar.bat</a> que está na raiz do projeto. Se você quiser abrir ele na sua IDE, é necessário instalar o JavaFX através da instalação do Java SE e configurar na sua IDE.
 
 ### Agradecimentos
 Agradeço a minha família, amigos e a você que leu até aqui (Parabéns!), sinta-se a vontade para melhorar o projeto :).
